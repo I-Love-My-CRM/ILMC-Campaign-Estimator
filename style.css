@@ -1,0 +1,39 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.calculator-card {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.input-group:focus-within label,
+.input-group.has-value label {
+    transform: translateY(-1.25rem) scale(0.8);
+    color: #4f46e5;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    .calculator-card {
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+
+    .print-only-header {
+        display: block !important;
+    }
+}
